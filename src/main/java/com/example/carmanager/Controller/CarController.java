@@ -17,17 +17,17 @@ public class CarController {
         this.carService = carService;
     }
 
-    @GetMapping("/cars")
+    @GetMapping
     public List<Car> getCar(){
         return carService.getCar();
     }
 
-    @PostMapping("/cars")
+    @PostMapping
     public void postNewCar(@RequestBody Car car){
         carService.addNewCar(car);
     }
 
-    @DeleteMapping("/cars")
+    @DeleteMapping
     public void removeCar(@RequestParam Long id) {
         carService.removeCar(id);
     }
