@@ -15,4 +15,9 @@ public class CarService {
     public void addNewCar (Car car){
         System.out.println(car);
     }
+
+    public void removeCar (Long id) {
+
+    }
+
 }
