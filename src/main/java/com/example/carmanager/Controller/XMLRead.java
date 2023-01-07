@@ -42,31 +42,33 @@ public class XMLRead {
     }
 
     public static void XMLRead(){
-        org.w3c.dom.Document doc = createFile();
-        cars.clear();
-        Car car;
+        if (cars.isEmpty()){
+            org.w3c.dom.Document doc = createFile();
+            Car car;
 
-        NodeList carNodes = doc.getElementsByTagName("Car");
-        for (int i = 0; i < carNodes.getLength(); i++) {
-            Node carNode = carNodes.item(i);
+            NodeList carNodes = doc.getElementsByTagName("Car");
+            for (int i = 0; i < carNodes.getLength(); i++) {
+                Node carNode = carNodes.item(i);
 
-            if (carNode.getNodeType() == Node.ELEMENT_NODE) {
-                Element carElement = (Element) carNode;
+                if (carNode.getNodeType() == Node.ELEMENT_NODE) {
+                    Element carElement = (Element) carNode;
 
-                Long id = Long.parseLong(carElement.getElementsByTagName("Azonosító").item(0).getTextContent());
-                String make = carElement.getElementsByTagName("Márka").item(0).getTextContent();
-                String model = carElement.getElementsByTagName("Modell").item(0).getTextContent();
-                Integer price = Integer.parseInt(carElement.getElementsByTagName("Ár").item(0).getTextContent());
-                Integer first_registration = Integer.parseInt(carElement.getElementsByTagName("Évjárat").item(0).getTextContent());
-                Integer mileage = Integer.parseInt(carElement.getElementsByTagName("Km_futás").item(0).getTextContent());
-                CarFuelEnum fuel = CarFuelEnum.valueOf(carElement.getElementsByTagName("Üzemanyag").item(0).getTextContent());
-                CarBodytypeEnum bodytype = CarBodytypeEnum.valueOf(carElement.getElementsByTagName("Kivitel").item(0).getTextContent());
-                LocalDate dop = LocalDate.parse(carElement.getElementsByTagName("Megvétel_ideje").item(0).getTextContent());
+                    Long id = Long.parseLong(carElement.getElementsByTagName("Azonosító").item(0).getTextContent());
+                    String make = carElement.getElementsByTagName("Márka").item(0).getTextContent();
+                    String model = carElement.getElementsByTagName("Modell").item(0).getTextContent();
+                    Integer price = Integer.parseInt(carElement.getElementsByTagName("Ár").item(0).getTextContent());
+                    Integer first_registration = Integer.parseInt(carElement.getElementsByTagName("Évjárat").item(0).getTextContent());
+                    Integer mileage = Integer.parseInt(carElement.getElementsByTagName("Km_futás").item(0).getTextContent());
+                    CarFuelEnum fuel = CarFuelEnum.valueOf(carElement.getElementsByTagName("Üzemanyag").item(0).getTextContent());
+                    CarBodytypeEnum bodytype = CarBodytypeEnum.valueOf(carElement.getElementsByTagName("Kivitel").item(0).getTextContent());
+                    LocalDate dop = LocalDate.parse(carElement.getElementsByTagName("Megvétel_ideje").item(0).getTextContent());
 
-                car = new Car(id, make, model, price, first_registration, mileage, fuel, bodytype, dop);
-                cars.add(car);
+                    car = new Car(id, make, model, price, first_registration, mileage, fuel, bodytype, dop);
+                    cars.add(car);
+                }
             }
         }
+
     }
 
     public static ArrayList<Car> getCars(){

@@ -20,6 +20,7 @@ public class CarService {
 
     public void addNewCar (Car car){
         cars.add(car);
+        System.out.println(cars);
     }
 
     public void removeCar (Long id) {

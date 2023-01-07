@@ -23,9 +23,11 @@ public class CarController {
     }
 
     //Add a new car
-    @PostMapping("/cars")
-    public void addNewCar(Car car){
+    @PostMapping(value = "/cars", produces = {"application/json"}, consumes = {"application/json"})
+    public String addNewCar(@RequestBody Car car){
+        System.out.println(car);
         carService.addNewCar(car);
+        return "IT just WORKS";
     }
 
     //Remove a car
