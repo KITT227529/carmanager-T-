@@ -22,6 +22,8 @@ import java.util.logging.Logger;
 
 public class XMLRead {
 
+    public static List<Car> cars = new LinkedList<>();
+
     public static Document createFile(){
         try{
             File file = new File("src/main/java/com/example/carmanager/CarsXML.xml");
@@ -39,7 +41,7 @@ public class XMLRead {
 
     public static List<Car> XMLRead(){
         org.w3c.dom.Document doc = createFile();
-        List<Car> cars = new LinkedList<>();
+
         Car car;
 
         NodeList carNodes = doc.getElementsByTagName("Car");
