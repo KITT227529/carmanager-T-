@@ -13,8 +13,7 @@ public class Car {
     private CarBodytypeEnum bodytype;
     private LocalDate dop;
 
-    public Car() {
-    }
+    public Car() {}
 
     public Car(Long id,
                String make,

@@ -4,12 +4,10 @@ import com.example.carmanager.Model.Car;
 import com.example.carmanager.Service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import java.util.List;
+import java.util.ArrayList;
 
 @RestController
-@RequestMapping("api/car")
 public class CarController {
-
     private final CarService carService;
 
     @Autowired
@@ -17,17 +15,21 @@ public class CarController {
         this.carService = carService;
     }
 
-    @GetMapping
-    public List<Car> getCar(){
+    //Get all car(s)
+    @GetMapping("/cars")
+    public ArrayList<Car> getCar(){
+        carService.ReadCars();
         return carService.getCar();
     }
 
-    @PostMapping
-    public void postNewCar(@RequestBody Car car){
+    //Add a new car
+    @PostMapping("/cars")
+    public void addNewCar(Car car){
         carService.addNewCar(car);
     }
 
-    @DeleteMapping
+    //Remove a car
+    @DeleteMapping("/cars")
     public void removeCar(@RequestParam Long id) {
         carService.removeCar(id);
     }

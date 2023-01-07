@@ -3,6 +3,7 @@ package com.example.carmanager.Controller;
 import com.example.carmanager.Model.Car;
 import com.example.carmanager.Model.CarBodytypeEnum;
 import com.example.carmanager.Model.CarFuelEnum;
+import org.apache.tomcat.util.digester.ArrayStack;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -14,16 +15,17 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class XMLRead {
-
-    public static List<Car> cars = new LinkedList<>();
-
+    private static ArrayList<Car> cars = new ArrayList<>();
     public static Document createFile(){
         try{
             File file = new File("src/main/java/com/example/carmanager/CarsXML.xml");
@@ -39,9 +41,9 @@ public class XMLRead {
         return null;
     }
 
-    public static List<Car> XMLRead(){
+    public static void XMLRead(){
         org.w3c.dom.Document doc = createFile();
-
+        cars.clear();
         Car car;
 
         NodeList carNodes = doc.getElementsByTagName("Car");
@@ -65,6 +67,9 @@ public class XMLRead {
                 cars.add(car);
             }
         }
+    }
+
+    public static ArrayList<Car> getCars(){
         return cars;
     }
 }
