@@ -10,7 +10,7 @@
         <Kivitel>COUPE</Kivitel>
         <Megvétel_ideje>2021-07-06</Megvétel_ideje>
     </Car>
-    <Car>
+    <Car    >
         <Márka>Suzuki</Márka>
         <Modell>Swift</Modell>
         <Ár>700000</Ár>
