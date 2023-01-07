@@ -3,7 +3,6 @@ package com.example.carmanager.Model;
 import java.time.LocalDate;
 
 public class Car {
-    private Long id;
     private String make;
     private String model;
     private Integer price;
@@ -14,26 +13,6 @@ public class Car {
     private LocalDate dop;
 
     public Car() {}
-
-    public Car(Long id,
-               String make,
-               String model,
-               Integer price,
-               Integer first_registration,
-               Integer mileage,
-               CarFuelEnum fuel,
-               CarBodytypeEnum bodytype,
-               LocalDate dop) {
-        this.id = id;
-        this.make = make;
-        this.model = model;
-        this.price = price;
-        this.first_registration = first_registration;
-        this.mileage = mileage;
-        this.fuel = fuel;
-        this.bodytype = bodytype;
-        this.dop = dop;
-    }
 
     public Car(String make,
                String model,
@@ -51,14 +30,6 @@ public class Car {
         this.fuel = fuel;
         this.bodytype = bodytype;
         this.dop = dop;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getMake() {
@@ -128,7 +99,6 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" +
-                "id=" + id +
                 ", make='" + make + '\'' +
                 ", model='" + model + '\'' +
                 ", price=" + price +

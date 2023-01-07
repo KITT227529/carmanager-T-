@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Cars>
     <Car>
-        <Azonosító>0</Azonosító>
         <Márka>Pontiac</Márka>
         <Modell>Firebird</Modell>
         <Ár>5000000</Ár>
@@ -12,7 +11,6 @@
         <Megvétel_ideje>2021-07-06</Megvétel_ideje>
     </Car>
     <Car>
-        <Azonosító>1</Azonosító>
         <Márka>Suzuki</Márka>
         <Modell>Swift</Modell>
         <Ár>700000</Ár>

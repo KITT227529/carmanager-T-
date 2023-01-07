@@ -10,9 +10,7 @@ import java.util.stream.Collectors;
 public class CarService {
     ArrayList<Car> cars = XMLRead.getCars();
 
-    public void ReadCars(){
-        XMLRead.XMLRead();
-    }
+    public void ReadCars(){ XMLRead.XMLRead(); }
 
     public ArrayList<Car> getCar(){
         return cars;
@@ -23,12 +21,6 @@ public class CarService {
         System.out.println(cars);
     }
 
-    public void removeCar (Long id) {
-
-//        cars = (ArrayList<Car>) cars.stream().filter(car -> car.getId()!=id).
-//                collect(Collectors.toList());
-        cars.remove(id);
-
-    }
+    public void removeCar (Long id) { cars.remove(id); }
 
 }
