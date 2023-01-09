@@ -1,23 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Cars>
-    <Car>
-        <Márka>Pontiac</Márka>
-        <Modell>Firebird</Modell>
-        <Ár>5000000</Ár>
-        <Évjárat>1983</Évjárat>
-        <Km_futás>185000</Km_futás>
+<Autók>
+    <Autó>
+        <Márka>1</Márka>
+        <Modell>1</Modell>
+        <Ár>5000</Ár>
+        <Évjárat>1903</Évjárat>
+        <Km_futás>200000</Km_futás>
         <Üzemanyag>PETROL</Üzemanyag>
         <Kivitel>COUPE</Kivitel>
         <Megvétel_ideje>2021-07-06</Megvétel_ideje>
-    </Car>
-    <Car    >
-        <Márka>Suzuki</Márka>
-        <Modell>Swift</Modell>
-        <Ár>700000</Ár>
-        <Évjárat>2003</Évjárat>
-        <Km_futás>75000</Km_futás>
+    </Autó>
+    <Autó>
+        <Márka>2</Márka>
+        <Modell>2</Modell>
+        <Ár>5000</Ár>
+        <Évjárat>1903</Évjárat>
+        <Km_futás>200000</Km_futás>
         <Üzemanyag>PETROL</Üzemanyag>
-        <Kivitel>SEDAN</Kivitel>
-        <Megvétel_ideje>2020-10-30</Megvétel_ideje>
-    </Car>
-</Cars>
+        <Kivitel>COUPE</Kivitel>
+        <Megvétel_ideje>2021-07-06</Megvétel_ideje>
+    </Autó>
+    <Autó>
+        <Márka>3</Márka>
+        <Modell>3</Modell>
+        <Ár>5000</Ár>
+        <Évjárat>1903</Évjárat>
+        <Km_futás>200000</Km_futás>
+        <Üzemanyag>PETROL</Üzemanyag>
+        <Kivitel>COUPE</Kivitel>
+        <Megvétel_ideje>2021-07-06</Megvétel_ideje>
+    </Autó>
+    <Autó>
+        <Márka>100</Márka>
+        <Modell>100</Modell>
+        <Ár>5000</Ár>
+        <Évjárat>1903</Évjárat>
+        <Km_futás>200000</Km_futás>
+        <Üzemanyag>PETROL</Üzemanyag>
+        <Kivitel>COUPE</Kivitel>
+        <Megvétel_ideje>2021-07-06</Megvétel_ideje>
+    </Autó>
+    <Autó>
+        <Márka>agazz</Márka>
+        <Modell>adgag</Modell>
+        <Ár>5000</Ár>
+        <Évjárat>1903</Évjárat>
+        <Km_futás>200000</Km_futás>
+        <Üzemanyag>PETROL</Üzemanyag>
+        <Kivitel>COUPE</Kivitel>
+        <Megvétel_ideje>2021-07-06</Megvétel_ideje>
+    </Autó>
+    <Autó>
+        <Márka>Sokadok post kérés</Márka>
+        <Modell>dsfasf</Modell>
+        <Ár>5000</Ár>
+        <Évjárat>1903</Évjárat>
+        <Km_futás>200000</Km_futás>
+        <Üzemanyag>DIESEL</Üzemanyag>
+        <Kivitel>CABRIO</Kivitel>
+        <Megvétel_ideje>2005-03-10</Megvétel_ideje>
+    </Autó>
+</Autók>

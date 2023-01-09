@@ -17,23 +17,23 @@ public class CarController {
 
     //Get all car(s)
     @GetMapping("/cars")
-    public ArrayList<Car> getCar(){
+    public ArrayList<Car> getCars(){
         carService.ReadCars();
-        return carService.getCar();
+        return carService.getCars();
     }
 
     //Add a new car
     @PostMapping(value = "/cars", produces = {"application/json"}, consumes = {"application/json"})
-    public String addNewCar(@RequestBody Car car){
+    public void addNewCar(@RequestBody Car car){
         System.out.println(car);
         carService.addNewCar(car);
-        return "IT just WORKS";
+        getCars();
     }
 
     //Remove a car
     @DeleteMapping("/cars")
-    public void removeCar(@RequestParam Long id) {
-        carService.removeCar(id);
+    public void removeCar(@RequestParam String id) {
+        carService.removeCar(Integer.parseInt(id));
     }
 
     //TODO: UPDATE METHOD

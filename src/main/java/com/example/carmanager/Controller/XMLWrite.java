@@ -18,7 +18,7 @@ public class XMLWrite {
 
     private static File file = new File("src/main/java/com/example/carmanager/CarsXML.xml");
 
-    public static void XMLSave (ArrayList <Car> cars) {
+    public static void Save (ArrayList <Car> cars) {
 
         try {
             Document document = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
