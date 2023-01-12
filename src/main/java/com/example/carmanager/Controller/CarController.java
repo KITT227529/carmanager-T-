@@ -40,10 +40,13 @@ public class CarController {
         logger.info("New car added.");
     }
 
-    @PutMapping("/cars/{id}")
-    public void updateCar(@RequestBody Car car, @PathVariable String id){
-        carService.updateCar(id, car);
-        logger.info("Selected car updated");
+    @PutMapping("/cars")
+    public void updateCar(@RequestBody Car car){
+        if (carService.updateCar(car)){
+            logger.info("Selected car updated");
+        }else{
+            logger.error("Selected car cannot be removed.");
+        }
     }
 
     @ResponseStatus(HttpStatus.ACCEPTED)

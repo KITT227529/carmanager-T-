@@ -43,12 +43,16 @@ public class CarService {
 
     }
 
-    public void updateCar(String id, Car car){
+    public Boolean updateCar(Car car){
 
-        Integer intID = Integer.parseInt(id);
-
-        if (intID >= cars.size()){
-            cars.set(intID,car);
+        for (Car forCar:cars) {
+            if (forCar.getId().equals(car.getId())){
+                cars.set(car.getId(),car);
+                XMLWrite.Save(cars);
+                return true;
+            }
         }
+        return false;
+
     }
 }

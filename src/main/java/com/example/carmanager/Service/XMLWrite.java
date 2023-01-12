@@ -31,7 +31,7 @@ public class XMLWrite {
 
                 rootElement.appendChild(carElement);
 
-                createChildElement(document, carElement, "ID", car.getMake());
+                createChildElement(document, carElement, "ID", car.getId().toString());
                 createChildElement(document, carElement, "Márka", car.getMake());
                 createChildElement(document, carElement, "Modell", car.getModel());
                 createChildElement(document, carElement, "Ár", car.getPrice().toString());
