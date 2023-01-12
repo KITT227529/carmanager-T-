@@ -23,9 +23,18 @@ public class CarService {
 
         return cars;
     }
-    public void removeCar (Integer id) {
+    public ArrayList<Car> removeCar (Integer id) {
+
         cars.remove(id);
+        XMLWrite.Save(cars);
+        return cars;
     }
 
+
     //TODO: UPDATE METHOD
+
+    public ArrayList<Car> updateCar(Integer id){
+        //cars.
+        return getCars();
+    }
 }

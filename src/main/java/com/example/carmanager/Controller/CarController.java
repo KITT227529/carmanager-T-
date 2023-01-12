@@ -31,10 +31,15 @@ public class CarController {
     }
 
     //Remove a car
-    @DeleteMapping("/cars")
-    public void removeCar(@RequestParam String id) {
-        carService.removeCar(Integer.parseInt(id));
+    @DeleteMapping("/cars/{id}")
+    public void removeCar(@PathVariable("id") Integer id) {
+
+        carService.removeCar(id);
+        getCars();
     }
 
     //TODO: UPDATE METHOD
+    public void updateCar(@PathVariable("id") Integer id){
+
+    }
 }
