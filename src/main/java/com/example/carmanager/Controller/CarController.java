@@ -17,29 +17,27 @@ public class CarController {
 
     //Get all car(s)
     @GetMapping("/cars")
-    public ArrayList<Car> getCars(){
+    public ArrayList<Car> getAllCars(){
         carService.ReadCars();
         return carService.getCars();
+    }
+    @GetMapping("/cars/{id}")
+    public Car getCar(@PathVariable String id){
+        return carService.getCar(id);
     }
 
     //Add a new car
     @PostMapping(value = "/cars", produces = {"application/json"}, consumes = {"application/json"})
     public void addNewCar(@RequestBody Car car){
-        System.out.println(car);
         carService.addNewCar(car);
-        getCars();
     }
 
-    //Remove a car
+    @PutMapping("/cars/{id}")
+    public void updateCar(@RequestBody Car car, @PathVariable String id){
+        carService.updateCar(id, car);
+    }
     @DeleteMapping("/cars/{id}")
-    public void removeCar(@PathVariable("id") Integer id) {
-
+    public void removeCar(@PathVariable String id) {
         carService.removeCar(id);
-        getCars();
-    }
-
-    //TODO: UPDATE METHOD
-    public void updateCar(@PathVariable("id") Integer id){
-
     }
 }

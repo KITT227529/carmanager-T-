@@ -16,6 +16,7 @@ public class CarService {
     public ArrayList<Car> getCars(){
         return cars;
     }
+    public Car getCar(String id) {return cars.get(Integer.parseInt(id));}
 
     public ArrayList<Car> addNewCar (Car car){
         cars.add(car);
@@ -23,9 +24,8 @@ public class CarService {
 
         return cars;
     }
-    public ArrayList<Car> removeCar (Integer id) {
-
-        cars.remove(id);
+    public ArrayList<Car> removeCar (String id) {
+        cars.remove(Integer.parseInt(id));
         XMLWrite.Save(cars);
         return cars;
     }
@@ -33,8 +33,7 @@ public class CarService {
 
     //TODO: UPDATE METHOD
 
-    public ArrayList<Car> updateCar(Integer id){
-        //cars.
-        return getCars();
+    public void updateCar(String id, Car car){
+        //
     }
 }
