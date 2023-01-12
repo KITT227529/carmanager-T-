@@ -3,6 +3,7 @@ package com.example.carmanager.Model;
 import java.time.LocalDate;
 
 public class Car {
+    private Integer id;
     private String make;
     private String model;
     private Integer price;
@@ -14,7 +15,8 @@ public class Car {
 
     public Car() {}
 
-    public Car(String make,
+    public Car(Integer id,
+               String make,
                String model,
                Integer price,
                Integer first_registration,
@@ -22,6 +24,7 @@ public class Car {
                CarFuelEnum fuel,
                CarBodytypeEnum bodytype,
                LocalDate dop) {
+        this.id = id;
         this.make = make;
         this.model = model;
         this.price = price;
@@ -30,6 +33,12 @@ public class Car {
         this.fuel = fuel;
         this.bodytype = bodytype;
         this.dop = dop;
+    }
+    public Integer getId() {
+        return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getMake() {

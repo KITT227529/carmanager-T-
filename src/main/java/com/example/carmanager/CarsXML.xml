@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Autók>
     <Autó>
+        <ID>111111111111</ID>
         <Márka>111111111111</Márka>
         <Modell>adgag</Modell>
         <Ár>5000</Ár>
@@ -11,16 +12,7 @@
         <Megvétel_ideje>2021-07-06</Megvétel_ideje>
     </Autó>
     <Autó>
-        <Márka>111111111111</Márka>
-        <Modell>adgag</Modell>
-        <Ár>5000</Ár>
-        <Évjárat>1903</Évjárat>
-        <Km_futás>200000</Km_futás>
-        <Üzemanyag>PETROL</Üzemanyag>
-        <Kivitel>COUPE</Kivitel>
-        <Megvétel_ideje>2021-07-06</Megvétel_ideje>
-    </Autó>
-    <Autó>
+        <ID>111111111111</ID>
         <Márka>111111111111</Márka>
         <Modell>adgag</Modell>
         <Ár>5000</Ár>

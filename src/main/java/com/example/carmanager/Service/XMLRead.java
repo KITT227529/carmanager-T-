@@ -36,7 +36,7 @@ public class XMLRead {
 
                     if (carNode.getNodeType() == Node.ELEMENT_NODE) {
                         Element carElement = (Element) carNode;
-
+                        Integer id = Integer.parseInt(carElement.getElementsByTagName("ID").item(0).getTextContent());
                         String make = carElement.getElementsByTagName("Márka").item(0).getTextContent();
                         String model = carElement.getElementsByTagName("Modell").item(0).getTextContent();
                         Integer price = Integer.parseInt(carElement.getElementsByTagName("Ár").item(0).getTextContent());
@@ -46,7 +46,7 @@ public class XMLRead {
                         CarBodytypeEnum bodytype = CarBodytypeEnum.valueOf(carElement.getElementsByTagName("Kivitel").item(0).getTextContent());
                         LocalDate dop = LocalDate.parse(carElement.getElementsByTagName("Megvétel_ideje").item(0).getTextContent());
 
-                        car = new Car(make, model, price, first_registration, mileage, fuel, bodytype, dop);
+                        car = new Car(id,make, model, price, first_registration, mileage, fuel, bodytype, dop);
                         cars.add(car);
                     }
                 }
