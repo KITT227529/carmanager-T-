@@ -1,16 +1,12 @@
 package com.example.carmanager.Service;
 
-import com.example.carmanager.Controller.XMLRead;
-import com.example.carmanager.Controller.XMLWrite;
 import com.example.carmanager.Model.Car;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
-import java.util.stream.Collectors;
 
 @Service
 public class CarService {
-    private static ArrayList<Car> cars = XMLRead.getCars();
-    public void ReadCars(){ XMLRead.XMLRead(); }
+    private ArrayList<Car> cars = XMLRead.ReadFile();
 
 
     public ArrayList<Car> getCars(){
@@ -24,16 +20,25 @@ public class CarService {
 
         return cars;
     }
-    public ArrayList<Car> removeCar (String id) {
-        cars.remove(Integer.parseInt(id));
-        XMLWrite.Save(cars);
-        return cars;
+    public Boolean removeCar (String id) {
+
+        int intID = Integer.parseInt(id);
+        if (intID < cars.size()) {
+            cars.remove(intID);
+            XMLWrite.Save(cars);
+            return true;
+        }else{
+            return false;
+        }
+
     }
 
-
-    //TODO: UPDATE METHOD
-
     public void updateCar(String id, Car car){
-        //
+
+        Integer intID = Integer.parseInt(id);
+
+        if (intID >= cars.size()){
+            cars.set(intID,car);
+        }
     }
 }

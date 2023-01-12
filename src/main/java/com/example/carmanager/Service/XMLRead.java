@@ -1,4 +1,4 @@
-package com.example.carmanager.Controller;
+package com.example.carmanager.Service;
 
 import com.example.carmanager.Model.Car;
 import com.example.carmanager.Model.CarBodytypeEnum;
@@ -22,7 +22,7 @@ public class XMLRead {
     private static ArrayList<Car> cars = new ArrayList<>();
     private static File file = new File("src/main/java/com/example/carmanager/CarsXML.xml");
 
-    public static void XMLRead() {
+    public static ArrayList<Car> ReadFile() {
 
         if (cars.isEmpty()) {
 
@@ -53,6 +53,7 @@ public class XMLRead {
             }catch (Exception e) { e.printStackTrace(); }
 
         }
+        return cars;
     }
 
         public static Document createFile () {
@@ -66,11 +67,6 @@ public class XMLRead {
                 Logger.getLogger(XMLRead.class.getName()).log(Level.SEVERE, null, exception);
             }
             return null;
-        }
-
-
-        public static ArrayList<Car> getCars () {
-            return cars;
         }
 
 }
