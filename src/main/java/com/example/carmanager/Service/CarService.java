@@ -34,6 +34,7 @@ public class CarService {
                 cars.remove(i);
                 break;
             }
+
         }
         XMLWrite.Save(cars);
         return true;

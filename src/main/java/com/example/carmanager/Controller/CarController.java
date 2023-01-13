@@ -40,6 +40,8 @@ public class CarController {
         logger.info("New car added.");
     }
 
+
+
     @PutMapping("/cars")
     public void updateCar(@RequestBody Car car){
         if (carService.updateCar(car)){

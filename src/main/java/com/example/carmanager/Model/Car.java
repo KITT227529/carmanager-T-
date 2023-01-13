@@ -6,6 +6,7 @@ public class Car {
     private Integer id;
     private String make;
     private String model;
+
     private Integer price;
     private Integer first_registration;
     private Integer mileage;
