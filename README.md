@@ -1,16 +1,16 @@
 # carmanager-T-
 CAR
- - id
- - make
- - model
- - price
- - first_registration
- - mileage
- - fuel
- - bodytype
- - dop
+ - id (Integer)
+ - make (String)
+ - model (String)
+ - price (Integer)
+ - first_registration (Integer)
+ - mileage (Integer)
+ - fuel (ENUM)
+ - bodytype (ENUM)
+ - dop (LocalDate)
  
-CONTROLLER
+CONTROLLER implements ICar
  - getAllCars
  - getCar (String id)
  - addNewCar
