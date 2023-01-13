@@ -1,6 +1,5 @@
 # carmanager-T-
 CAR
-
  - id
  - make
  - model
@@ -10,8 +9,8 @@ CAR
  - fuel
  - bodytype
  - dop
+ 
 CONTROLLER
-
  - getAllCars
  - getCar (String id)
  - addNewCar
