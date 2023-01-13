@@ -27,3 +27,10 @@ SERVICE
 READ and WRITE file:
  - save (Arraylist<Car>)
  - readFile (Arraylist<Car>)
+ 
+ API: 
+Get: localhost:8080/cars
+Get: localhost:8080/cars/{id}
+POST: localhost:8080/cars
+PUT: localhost:8080/cars  (
+DELET: localhost:8080/cars/{id}
