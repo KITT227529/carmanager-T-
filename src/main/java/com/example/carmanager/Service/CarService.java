@@ -8,13 +8,10 @@ import java.util.ArrayList;
 @Service
 public class CarService {
     private ArrayList<Car> cars = XMLRead.ReadFile();
-
-
     public ArrayList<Car> getCars(){
         return cars;
     }
-    public Car getCar(String id) {return cars.get(Integer.parseInt(id));}
-
+    public Car getCar(String id) { return cars.get(Integer.parseInt(id)); }
     public ArrayList<Car> addNewCar (Car car) throws DuplicateKeyException {
         Boolean tru = false;
         for (Car forCar:cars) {
@@ -31,28 +28,25 @@ public class CarService {
 
     }
     public Boolean removeCar (String id) {
-
         int intID = Integer.parseInt(id);
-        if (intID < cars.size()) {
-            cars.remove(intID);
-            XMLWrite.Save(cars);
-            return true;
-        }else{
-            return false;
+        for (int i = 0; i<cars.size();i++) {
+            if (cars.get(i).getId().equals(intID)){
+                cars.remove(i);
+                break;
+            }
         }
-
+        XMLWrite.Save(cars);
+        return true;
     }
-
     public Boolean updateCar(Car car){
-
-        for (Car forCar:cars) {
-            if (forCar.getId().equals(car.getId())){
-                cars.set(car.getId(),car);
+        for (int i = 0; i<cars.size();i++) {
+            if (cars.get(i).getId().equals(car.getId())){
+                cars.set(i,car);
                 XMLWrite.Save(cars);
                 return true;
             }
         }
         return false;
-
     }
+
 }

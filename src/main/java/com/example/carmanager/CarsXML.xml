@@ -2,7 +2,7 @@
 <Autók>
     <Autó>
         <ID>1</ID>
-        <Márka>111111111111</Márka>
+        <Márka>Suzuki</Márka>
         <Modell>adgag</Modell>
         <Ár>5000</Ár>
         <Évjárat>1903</Évjárat>
@@ -13,8 +13,8 @@
     </Autó>
     <Autó>
         <ID>3</ID>
-        <Márka>111111111111</Márka>
-        <Modell>adgag</Modell>
+        <Márka>BMW</Márka>
+        <Modell>E82</Modell>
         <Ár>5000</Ár>
         <Évjárat>1903</Évjárat>
         <Km_futás>200000</Km_futás>
@@ -24,13 +24,24 @@
     </Autó>
     <Autó>
         <ID>2</ID>
-        <Márka>22222</Márka>
-        <Modell>akármi</Modell>
-        <Ár>412000</Ár>
+        <Márka>Audi</Márka>
+        <Modell>A3</Modell>
+        <Ár>2412000</Ár>
         <Évjárat>1903</Évjárat>
         <Km_futás>200000</Km_futás>
-        <Üzemanyag>DIESEL</Üzemanyag>
+        <Üzemanyag>PETROL</Üzemanyag>
         <Kivitel>COUPE</Kivitel>
+        <Megvétel_ideje>2004-07-06</Megvétel_ideje>
+    </Autó>
+    <Autó>
+        <ID>4</ID>
+        <Márka>Nissan</Márka>
+        <Modell>Almera</Modell>
+        <Ár>700000</Ár>
+        <Évjárat>2004</Évjárat>
+        <Km_futás>193300</Km_futás>
+        <Üzemanyag>PETROL</Üzemanyag>
+        <Kivitel>SEDAN</Kivitel>
         <Megvétel_ideje>2004-07-06</Megvétel_ideje>
     </Autó>
 </Autók>

@@ -48,7 +48,6 @@ public class CarController {
             logger.error("Selected car cannot be removed.");
         }
     }
-
     @ResponseStatus(HttpStatus.ACCEPTED)
     @DeleteMapping("/cars/{id}")
     public void removeCar(@PathVariable String id) {
@@ -61,5 +60,4 @@ public class CarController {
     }
 
 
-    //TODO: Specific autók kilistázása
 }
